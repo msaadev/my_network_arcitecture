@@ -5,13 +5,3 @@ abstract class BaseModel<T> {
 
   T fromJson(Map json);
 }
-
-class BaseResponse<R, T extends BaseModel<T>> {
-  T? data;
-  String? message;
-  Error? error;
-
-  BaseResponse({this.data, this.message, this.error});
-}
-
-var a = BaseResponse<List<CharacterModel>, CharacterModel>();
